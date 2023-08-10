@@ -3,7 +3,7 @@ package com.unlockway.backendapplication.interfaces;
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class ExerciseSession implements ExerciseSessionInterface{
+public abstract class ExerciseSession implements ExerciseSessionInterface{
     public UUID id;
     public int repetitions;
     public double restTimeBetweenRepetitions;// IA

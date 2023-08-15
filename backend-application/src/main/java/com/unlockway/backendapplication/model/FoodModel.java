@@ -1,19 +1,23 @@
 package com.unlockway.backendapplication.model;
 
-import java.util.UUID;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "tb_foods")
 public class FoodModel {
-    private UUID id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
+    @Column(columnDefinition = "TEXT")
     private String description;
-    private double calories;
-    private double proteins;
-    private double water;
-    private double minerals;
-    private double vitamins;
-    private double fats;
+    private String calories;
+    private String proteins;
+    private String water;
+    private String minerals;
+    private String vitamins;
+    private String fats;
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
@@ -33,55 +37,55 @@ public class FoodModel {
         this.description = description;
     }
 
-    public double getCalories() {
+    public String getCalories() {
         return calories;
     }
 
-    public void setCalories(double calories) {
+    public void setCalories(String calories) {
         this.calories = calories;
     }
 
-    public double getProteins() {
+    public String getProteins() {
         return proteins;
     }
 
-    public void setProteins(double proteins) {
+    public void setProteins(String proteins) {
         this.proteins = proteins;
     }
 
-    public double getWater() {
+    public String getWater() {
         return water;
     }
 
-    public void setWater(double water) {
+    public void setWater(String water) {
         this.water = water;
     }
 
-    public double getMinerals() {
+    public String getMinerals() {
         return minerals;
     }
 
-    public void setMinerals(double minerals) {
+    public void setMinerals(String minerals) {
         this.minerals = minerals;
     }
 
-    public double getVitamins() {
+    public String getVitamins() {
         return vitamins;
     }
 
-    public void setVitamins(double vitamins) {
+    public void setVitamins(String vitamins) {
         this.vitamins = vitamins;
     }
 
-    public double getFats() {
+    public String getFats() {
         return fats;
     }
 
-    public void setFats(double fats) {
+    public void setFats(String fats) {
         this.fats = fats;
     }
 
-    public FoodModel(UUID id, String name, String description, double calories, double proteins, double water, double minerals, double vitamins, double fats) {
+    public FoodModel(int id, String name, String description, String calories, String proteins, String water, String minerals, String vitamins, String fats) {
         this.id = id;
         this.name = name;
         this.description = description;

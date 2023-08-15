@@ -7,8 +7,8 @@ import java.util.UUID;
 @Entity
 @Table(name = "tb_users")
 public class UserModel {
-    @Id @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
@@ -16,16 +16,14 @@ public class UserModel {
     @Column(name = "password_user")
     private String password;
     private String email;
-    private double height;
-    private double weight;
-    private Goal goals;
-    public enum Goal{
-        GainMuscleMass,// Ganhar massa muscular
-        LoseWeight,// Perder peso
-        keepHealthy,// Se manter saudável
-    }
+    private String height;
+    private String weight;
+    private String goals;
+//    public enum Goal{
+//        GAINMASS, LOSEWEIGHT, KEEPHEALTH, // Ganhar massa muscular // Perder peso // Se manter saudável
+//    }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
@@ -61,31 +59,31 @@ public class UserModel {
         this.email = email;
     }
 
-    public double getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public Goal getGoals() {
+    public String getGoals() {
         return goals;
     }
 
-    public void setGoals(Goal goals) {
+    public void setGoals(String goals) {
         this.goals = goals;
     }
 
-    public UserModel(UUID id, String firstName, String lastName, String password, String email, double height, double weight, Goal goals) {
+    public UserModel(int id, String firstName, String lastName, String password, String email, String height, String weight, String goals) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

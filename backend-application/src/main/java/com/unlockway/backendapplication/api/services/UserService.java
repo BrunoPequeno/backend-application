@@ -20,4 +20,10 @@ public class UserService {
 
         return result.stream().map(UserDTO::new).toList();
     }
+    @Transactional(readOnly = true)
+    public List<UserDTO> findById(int id){
+        List<UserModel> result = userRepository.findById(id);
+
+        return result.stream().map(UserDTO::new).toList();
+    }
 }

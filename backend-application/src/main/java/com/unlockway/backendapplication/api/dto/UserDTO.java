@@ -1,32 +1,28 @@
 package com.unlockway.backendapplication.api.dto;
 
 import com.unlockway.backendapplication.model.UserModel;
-import jakarta.persistence.Column;
 import org.springframework.beans.BeanUtils;
 
-import java.util.UUID;
 
 public class UserDTO {
-    private UUID id;
-
+    private int id;
     private String firstName;
     private String lastName;
-
     private String password;
     private String email;
-    private double height;
-    private double weight;
-    private UserModel.Goal goals;
+    private String height;
+    private String weight;
+    private String goals;
 
     public UserDTO(UserModel entity){
         BeanUtils.copyProperties(entity, this);
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -62,27 +58,27 @@ public class UserDTO {
         this.email = email;
     }
 
-    public double getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public UserModel.Goal getGoals() {
+    public String getGoals() {
         return goals;
     }
 
-    public void setGoals(UserModel.Goal goals) {
+    public void setGoals(String goals) {
         this.goals = goals;
     }
 }

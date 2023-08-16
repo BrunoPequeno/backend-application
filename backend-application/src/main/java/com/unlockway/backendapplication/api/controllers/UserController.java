@@ -1,12 +1,11 @@
 package com.unlockway.backendapplication.api.controllers;
 
+import com.unlockway.backendapplication.api.dto.CreateUserDTO;
 import com.unlockway.backendapplication.api.dto.UserDTO;
 import com.unlockway.backendapplication.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -27,5 +26,10 @@ public class UserController {
         List<UserDTO> result = userService.findById(id);
 
         return result;
+    }
+    @PostMapping(value = "/create")
+    public UserDTO createUser(@RequestBody CreateUserDTO createUserDTO) {
+        UserDTO createdUser = userService.createUser(createUserDTO);
+        return createdUser;
     }
 }

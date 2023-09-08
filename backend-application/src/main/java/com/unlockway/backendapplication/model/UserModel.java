@@ -18,7 +18,7 @@ public class UserModel {
     private String email;
     private String height;
     private String weight;
-    private String goals;
+    private String goal;
 //    public enum Goal{
 //        GAINMASS, LOSEWEIGHT, KEEPHEALTH, // Ganhar massa muscular // Perder peso // Se manter saudável
 //    }
@@ -76,11 +76,11 @@ public class UserModel {
     }
 
     public String getGoals() {
-        return goals;
+        return goal;
     }
 
-    public void setGoals(String goals) {
-        this.goals = goals;
+    public void setGoals(String goal) {
+        this.goal = goal;
     }
 
     public UserModel(int id, String firstName, String lastName, String password, String email, String height, String weight, String goals) {
@@ -91,7 +91,7 @@ public class UserModel {
         this.email = email;
         this.height = height;
         this.weight = weight;
-        this.goals = goals;
+        this.goal = goal;
     }
 
     public UserModel() {

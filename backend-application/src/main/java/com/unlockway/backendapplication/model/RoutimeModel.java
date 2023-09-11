@@ -1,8 +1,5 @@
 package com.unlockway.backendapplication.model;
 
-
-
-import com.unlockway.backendapplication.interfaces.ExerciseSessionInterface;
 import com.unlockway.backendapplication.interfaces.TimeInterface;
 import com.unlockway.backendapplication.interfaces.MealInterface;
 import java.time.LocalDate;
@@ -33,7 +30,7 @@ public class RoutimeModel {
 
     }
 
-    public abstract class RoutineExercise implements TimeInterface, ExerciseSessionInterface {
+    public abstract class RoutineExercise implements TimeInterface {
 
     }
 

@@ -29,7 +29,7 @@ public class FoodController {
 
         return result;
     }
-    @PostMapping(value = "/new")
+    @PostMapping(value = "/create")
     public FoodDTO createFood(@RequestBody CreateFoodDTO createFoodDTO) {
         FoodDTO createdFood = foodService.createFood(createFoodDTO);
         return createdFood;

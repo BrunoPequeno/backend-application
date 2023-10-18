@@ -1,9 +1,10 @@
-package com.unlockway.backendapplication.api.services;
+package com.unlockway.backendapplication.services;
 
-import com.unlockway.backendapplication.api.dto.CreateFoodDTO;
-import com.unlockway.backendapplication.api.dto.FoodDTO;
-import com.unlockway.backendapplication.api.repositories.FoodRepository;
-import com.unlockway.backendapplication.model.FoodModel;
+import com.unlockway.backendapplication.dto.CreateFoodDTO;
+import com.unlockway.backendapplication.dto.FoodDTO;
+import com.unlockway.backendapplication.enums.Measure;
+import com.unlockway.backendapplication.repositories.FoodRepository;
+import com.unlockway.backendapplication.FoodModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,7 +41,9 @@ public class FoodService {
         newFood.setWater(createFoodDTO.getWater());
         newFood.setMinerals(createFoodDTO.getMinerals());
         newFood.setVitamins(createFoodDTO.getVitamins());
+        newFood.setMeasure(createFoodDTO.getMeasure());
         newFood.setFats(createFoodDTO.getFats());
+        newFood.setPhoto(createFoodDTO.getPhoto());
 
         FoodModel savedFoodModel = foodRepository.save(newFood);
         return new FoodDTO(savedFoodModel);

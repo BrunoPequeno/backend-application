@@ -1,10 +1,8 @@
-package com.unlockway.backendapplication.api.controllers;
+package com.unlockway.backendapplication.controllers;
 
-import com.unlockway.backendapplication.api.dto.CreateFoodDTO;
-import com.unlockway.backendapplication.api.dto.CreateUserDTO;
-import com.unlockway.backendapplication.api.dto.FoodDTO;
-import com.unlockway.backendapplication.api.dto.UserDTO;
-import com.unlockway.backendapplication.api.services.FoodService;
+import com.unlockway.backendapplication.dto.CreateFoodDTO;
+import com.unlockway.backendapplication.dto.FoodDTO;
+import com.unlockway.backendapplication.services.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

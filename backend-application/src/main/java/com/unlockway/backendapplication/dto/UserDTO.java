@@ -1,30 +1,30 @@
-package com.unlockway.backendapplication.model;
+package com.unlockway.backendapplication.dto;
 
-import jakarta.persistence.*;
+import com.unlockway.backendapplication.UserModel;
+import com.unlockway.backendapplication.enums.Goals;
+import org.springframework.beans.BeanUtils;
 
-import java.util.UUID;
 
-@Entity
-@Table(name = "tb_users")
-public class UserModel {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
     private int id;
-    @Column(name = "first_name")
     private String firstName;
-    @Column(name = "last_name")
     private String lastName;
-    @Column(name = "password_user")
     private String password;
     private String email;
     private String height;
     private String weight;
-    private String goal;
-//    public enum Goal{
-//        GAINMASS, LOSEWEIGHT, KEEPHEALTH, // Ganhar massa muscular // Perder peso // Se manter saudável
-//    }
+    private Goals goals;
+
+    public UserDTO(UserModel entity){
+        BeanUtils.copyProperties(entity, this);
+    }
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -75,26 +75,11 @@ public class UserModel {
         this.weight = weight;
     }
 
-    public String getGoals() {
-        return goal;
+    public Goals getGoals() {
+        return goals;
     }
 
-    public void setGoals(String goal) {
-        this.goal = goal;
-    }
-
-    public UserModel(int id, String firstName, String lastName, String password, String email, String height, String weight, String goals) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-        this.email = email;
-        this.height = height;
-        this.weight = weight;
-        this.goal = goal;
-    }
-
-    public UserModel() {
-
+    public void setGoals(Goals goals) {
+        this.goals = goals;
     }
 }

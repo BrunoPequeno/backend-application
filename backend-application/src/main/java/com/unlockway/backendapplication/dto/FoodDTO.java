@@ -1,6 +1,7 @@
-package com.unlockway.backendapplication.api.dto;
+package com.unlockway.backendapplication.dto;
 
-import com.unlockway.backendapplication.model.FoodModel;
+import com.unlockway.backendapplication.FoodModel;
+import com.unlockway.backendapplication.enums.Measure;
 import org.springframework.beans.BeanUtils;
 
 
@@ -8,12 +9,14 @@ public class FoodDTO {
     private int id;
     private String name;
     private String description;
-    private String calories;
-    private String proteins;
-    private String water;
+    private double calories;
+    private double proteins;
+    private double water;
     private String minerals;
     private String vitamins;
-    private String fats;
+    private Measure measure;
+    private double fats;
+    private String photo;
 
     public FoodDTO() {
 
@@ -47,27 +50,27 @@ public class FoodDTO {
         this.description = description;
     }
 
-    public String getCalories() {
+    public double getCalories() {
         return calories;
     }
 
-    public void setCalories(String calories) {
+    public void setCalories(double calories) {
         this.calories = calories;
     }
 
-    public String getProteins() {
+    public double getProteins() {
         return proteins;
     }
 
-    public void setProteins(String proteins) {
+    public void setProteins(double proteins) {
         this.proteins = proteins;
     }
 
-    public String getWater() {
+    public double getWater() {
         return water;
     }
 
-    public void setWater(String water) {
+    public void setWater(double water) {
         this.water = water;
     }
 
@@ -87,11 +90,27 @@ public class FoodDTO {
         this.vitamins = vitamins;
     }
 
-    public String getFats() {
+    public double getFats() {
         return fats;
     }
 
-    public void setFats(String fats) {
+    public void setFats(double fats) {
         this.fats = fats;
+    }
+
+    public Measure getMeasure() {
+        return measure;
+    }
+
+    public void setMeasure(Measure measure) {
+        this.measure = measure;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

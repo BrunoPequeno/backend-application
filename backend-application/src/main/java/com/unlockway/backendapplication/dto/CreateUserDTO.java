@@ -1,19 +1,21 @@
-package com.unlockway.backendapplication.api.dto;
+package com.unlockway.backendapplication.dto;
+
+import com.unlockway.backendapplication.enums.Goals;
 
 public class CreateUserDTO {
         private String firstName;
         private String lastName;
         private String password;
         private String email;
-        private String height;
-        private String weight;
-        private String goals;
+        private double height;
+        private double weight;
+        private Goals goals;
 
     public CreateUserDTO() {
 
     }
 
-    public CreateUserDTO(String firstName, String lastName, String password, String email, String height, String weight, String goals) {
+    public CreateUserDTO(String firstName, String lastName, String password, String email, double height, double weight, Goals goals) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
@@ -55,27 +57,27 @@ public class CreateUserDTO {
         this.email = email;
     }
 
-    public String getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public String getGoals() {
+    public Goals getGoals() {
         return goals;
     }
 
-    public void setGoals(String goals) {
+    public void setGoals(Goals goals) {
         this.goals = goals;
     }
 }

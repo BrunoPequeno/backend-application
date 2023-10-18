@@ -1,10 +1,9 @@
-package com.unlockway.backendapplication.api.services;
+package com.unlockway.backendapplication.services;
 
-import com.unlockway.backendapplication.api.dto.CreateUserDTO;
-import com.unlockway.backendapplication.api.dto.UserDTO;
-import com.unlockway.backendapplication.api.repositories.UserRepository;
-import com.unlockway.backendapplication.model.UserModel;
-import org.apache.catalina.User;
+import com.unlockway.backendapplication.dto.CreateUserDTO;
+import com.unlockway.backendapplication.dto.UserDTO;
+import com.unlockway.backendapplication.repositories.UserRepository;
+import com.unlockway.backendapplication.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

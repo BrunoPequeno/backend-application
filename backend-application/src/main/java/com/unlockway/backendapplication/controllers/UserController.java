@@ -1,8 +1,8 @@
-package com.unlockway.backendapplication.api.controllers;
+package com.unlockway.backendapplication.controllers;
 
-import com.unlockway.backendapplication.api.dto.CreateUserDTO;
-import com.unlockway.backendapplication.api.dto.UserDTO;
-import com.unlockway.backendapplication.api.services.UserService;
+import com.unlockway.backendapplication.dto.CreateUserDTO;
+import com.unlockway.backendapplication.dto.UserDTO;
+import com.unlockway.backendapplication.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

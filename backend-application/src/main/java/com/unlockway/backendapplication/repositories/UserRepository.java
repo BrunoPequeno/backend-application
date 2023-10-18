@@ -1,6 +1,6 @@
-package com.unlockway.backendapplication.api.repositories;
+package com.unlockway.backendapplication.repositories;
 
-import com.unlockway.backendapplication.model.UserModel;
+import com.unlockway.backendapplication.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
